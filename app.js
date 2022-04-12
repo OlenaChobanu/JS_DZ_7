@@ -64,3 +64,18 @@ const arrayCalculate = () => {
 }
 
 arrayCalculate();
+
+
+
+let sum = 0;
+let i = 0; 
+
+function recSum(arr, index){
+    sum += arr[i];
+    i++;
+    if(i === index + 1) return;
+    rec(arr, index);
+    return sum;
+}
+recSum([1,2,3,4,5,6,7],5);
+console.log('sum: ', sum)
